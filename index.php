@@ -21,8 +21,6 @@
 
     </script>
 
-
-
     <div id="container"></div>
 
     <script type="text/babel">
@@ -98,6 +96,12 @@
       }
 
       class Game extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            status: "status",
+          };
+        }
         render() {
           return (
             <div className="game">
@@ -105,7 +109,7 @@
                 <Board />
               </div>
               <div className="game-info">
-                <div>{/* status */}</div>
+                <div>{this.state.status}</div>
                 <ol>{/* TODO */}</ol>
               </div>
             </div>
